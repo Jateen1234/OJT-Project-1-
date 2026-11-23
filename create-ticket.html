@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-fixed":"#d8e2ff","inverse-primary":"#006877","inverse-on-surface":"#2e3036","secondary-container":"#0566d9","tertiary":"#ffd6a3","surface-dim":"#111319","secondary":"#adc6ff","on-secondary-fixed-variant":"#004395","error":"#ffb4ab","tertiary-fixed":"#ffddb5","primary-container":"#22d3ee","secondary-fixed-dim":"#adc6ff","on-tertiary":"#462b00","surface-tint":"#2fd9f4","on-surface":"#e1e2e9","on-tertiary-fixed-variant":"#643f00","surface-container-highest":"#32353a","on-surface-variant":"#bbc9cd","surface-container":"#1d2025","on-tertiary-fixed":"#2a1800","on-error":"#690005","on-primary-container":"#005763","on-primary-fixed-variant":"#004e5a","on-primary":"#00363e","primary-fixed-dim":"#2fd9f4","primary-fixed":"#a2eeff","on-primary-fixed":"#001f25","surface-bright":"#36393f","on-background":"#e1e2e9","on-error-container":"#ffdad6","primary":"#8aebff","background":"#111319","surface-container-lowest":"#0b0e13","tertiary-container":"#ffb13b","on-secondary-fixed":"#001a42","surface-container-high":"#272a30","surface-variant":"#32353a","on-secondary-container":"#e6ecff","inverse-surface":"#e1e2e9","tertiary-fixed-dim":"#ffb957","surface-container-low":"#191c21","on-secondary":"#002e6a","outline-variant":"#3c494c","on-tertiary-container":"#6e4600","surface":"#111319","outline":"#859397","error-container":"#93000a"},borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},spacing:{"space-md":"1rem",gutter:"1rem","space-xl":"2rem","space-lg":"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem",margin:"1.5rem"},fontFamily:{"title-lg":["Inter"],"title-md":["Inter"],"headline-lg":["Inter"],"label-lg":["Inter"],"label-md":["Inter"],"label-sm":["Inter"],"headline-md":["Inter"],"display-lg-mobile":["Inter"],"body-lg":["Inter"],"display-lg":["Inter"],"body-md":["Inter"]},fontSize:{"title-lg":["18px",{lineHeight:"24px",fontWeight:"500"}],"title-md":["16px",{lineHeight:"22px",fontWeight:"500"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"600"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"500"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"500"}],"headline-md":["22px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"display-lg-mobile":["32px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"display-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="flex items-center gap-space-sm px-margin py-space-lg"><div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container shadow-[0_0_24px_rgba(34,211,238,0.25)]"><span class="material-symbols-outlined text-[22px]">graphic_eq</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface">VoiceBot Support</span><span class="font-label-sm text-label-sm text-primary tracking-wide uppercase">Customer Portal</span></div></div><div class="px-space-md mt-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-full"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="support-chat-voicebot" href="#"><span class="material-symbols-outlined text-[20px]">mic</span><span class="font-label-lg text-label-lg">Support Chat / VoiceBot</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="create-ticket" href="#"><span class="material-symbols-outlined text-[20px]">add_circle</span><span class="font-label-lg text-label-lg">Create Ticket</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="my-tickets" href="#"><span class="material-symbols-outlined text-[20px]">confirmation_number</span><span class="font-label-lg text-label-lg">My Tickets</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="help-about" href="#"><span class="material-symbols-outlined text-[20px]">help_center</span><span class="font-label-lg text-label-lg">Help &amp; About</span></a></nav></div></div><div class="p-space-md"><nav class="flex flex-col"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-full text-on-surface-variant hover:bg-error-container hover:text-on-error-container transition-colors" data-path="logout" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-label-lg text-label-lg">Logout</span></a></nav></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-outline text-[18px]">home</span><span class="text-outline text-label-sm">/</span><span class="font-label-md text-label-md text-on-surface-variant">Support Portal</span></div><div class="flex items-center gap-space-lg"><div class="hidden md:flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-md text-label-md text-primary">Online - AI Assistant Active</span></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative p-space-xs rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-tight">Voxa</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Customer Demo</span></div><span class="material-symbols-outlined text-outline text-[18px]">expand_more</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full relative">
+<!-- Interactive Toast Notification Container -->
+<div class="fixed top-20 right-6 z-50 flex flex-col gap-space-sm pointer-events-none transition-all duration-300" id="toast-container"></div>
+<!-- Main Content Layout Area -->
+<div class="p-space-lg max-w-7xl mx-auto w-full flex flex-col gap-space-xl">
+<!-- Header Block & Live Meta Metrics -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md mb-space-xs">
+<span>Support Portal</span>
+<span class="text-outline text-label-sm">/</span>
+<span class="text-primary font-medium">Create Ticket</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight flex items-center gap-space-sm">
+<span>Create Support Ticket</span>
+<span class="hidden sm:inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+            Tier 2 Active
+          </span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs max-w-2xl">
+          Submit a structured technical or service request. Our engineering tier will triage and respond promptly according to active SLA commitments.
+        </p>
+</div>
+<!-- Quick Metrics Pill Counter -->
+<div class="flex items-center gap-space-sm bg-surface-container-low p-space-sm rounded-full self-start lg:self-auto shadow-sm">
+<div class="flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">confirmation_number</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Stored Tickets:</span>
+<span class="font-label-md text-label-md text-primary font-bold" id="ticket-total-counter">4</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">timer</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Avg Resp:</span>
+<span class="font-label-md text-label-md text-secondary font-bold">2.4h</span>
+</div>
+</div>
+</div>
+<!-- AI VoiceBot Notice Callout Banner -->
+<div class="relative overflow-hidden rounded-lg bg-surface-container-low p-space-lg shadow-sm">
+<div class="absolute -right-16 -top-16 w-56 h-56 rounded-full bg-gradient-to-br from-primary-container/10 to-transparent blur-2xl pointer-events-none"></div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md relative z-10">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex-shrink-0 flex items-center justify-center text-primary shadow-[0_0_20px_rgba(34,211,238,0.2)]">
+<span class="material-symbols-outlined text-[22px]">smart_toy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface flex items-center gap-space-xs">
+              AI Triage &amp; Instant Resolution Note
+            </span>
+<span class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+              For instant automated resolutions (passwords, status checks, FAQs), you can also speak directly with our VoiceBot assistant. For billing discrepancies, API bugs, or complex requests, proceed below.
+            </span>
+</div>
+</div>
+<a class="flex-shrink-0 flex items-center gap-space-xs px-space-md py-space-sm rounded-full bg-surface-container-high hover:bg-surface-container-highest text-primary hover:text-on-surface transition-all text-label-md font-label-md" data-path="support-chat-voicebot" href="#">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+          Launch VoiceBot
+        </a>
+</div>
+</div>
+<!-- Main Workspace: Form & Context Sidebar Bento -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Primary Card: Form Container & Success Card Switcher -->
+<div class="lg:col-span-8 flex flex-col">
+<!-- Form Card -->
+<div class="rounded-lg bg-surface-container p-space-xl shadow-xl relative transition-all duration-300" id="ticket-form-card">
+<div class="flex items-center justify-between pb-space-lg mb-space-lg bg-surface-container-low/50 -mx-space-xl -mt-space-xl p-space-xl rounded-t-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">post_add</span>
+<div>
+<h2 class="font-title-lg text-title-lg text-on-surface">Ticket Specifications</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Fields tagged with an asterisk (*) are mandatory</p>
+</div>
+</div>
+<span class="text-outline font-label-sm text-label-sm">Standard Protocol v3.2</span>
+</div>
+<form class="flex flex-col gap-space-lg" id="create-ticket-form" novalidate="">
+<!-- 1. Subject Field -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between" for="ticket-subject">
+<span>Ticket Subject <span class="text-error">*</span></span>
+<span class="font-label-sm text-label-sm text-outline" id="subject-count">0 / 120</span>
+</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low text-on-surface placeholder:text-outline/60 px-space-md py-space-sm rounded-full font-body-md text-body-md focus:outline-none focus:bg-surface-container-high transition-all shadow-inner" id="ticket-subject" maxlength="120" placeholder="Enter a concise summary of your issue" type="text"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-[18px] pointer-events-none">edit</span>
+</div>
+<div class="hidden text-error font-label-sm text-label-sm flex items-center gap-1 mt-1" id="subject-error">
+<span class="material-symbols-outlined text-[16px]">error</span>
+<span>Please provide a brief subject for your issue (min 5 characters).</span>
+</div>
+</div>
+<!-- 2. Category & Priority Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Category Field -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="ticket-category">
+                  Category <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface px-space-md py-space-sm rounded-full font-body-md text-body-md focus:outline-none focus:bg-surface-container-high transition-all cursor-pointer shadow-inner pr-10" id="ticket-category">
+<option class="bg-surface-container-low text-outline" disabled="" selected="" value="">Select a category...</option>
+<option class="bg-surface-container-low text-on-surface" value="Account">Account Access &amp; Profiles</option>
+<option class="bg-surface-container-low text-on-surface" value="Technical Issue">Technical Issue &amp; API Integration</option>
+<option class="bg-surface-container-low text-on-surface" value="Payment">Payment, Billing &amp; Invoices</option>
+<option class="bg-surface-container-low text-on-surface" value="General Query">General Query &amp; Licensing</option>
+<option class="bg-surface-container-low text-on-surface" value="Other">Other Inquiries</option>
+</select>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-[20px] pointer-events-none">unfold_more</span>
+</div>
+<div class="hidden text-error font-label-sm text-label-sm flex items-center gap-1 mt-1" id="category-error">
+<span class="material-symbols-outlined text-[16px]">error</span>
+<span>Please select an applicable category.</span>
+</div>
+</div>
+<!-- Priority Selector Dropdown / Status Wrapper -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between">
+<span>Priority Level</span>
+<span class="font-label-sm text-label-sm text-tertiary" id="priority-sla-indicator">24h Response SLA</span>
+</label>
+<!-- Priority Options Pills -->
+<div class="grid grid-cols-3 gap-space-xs bg-surface-container-low p-1 rounded-full">
+<label class="flex items-center justify-center gap-1.5 py-1.5 rounded-full cursor-pointer transition-colors text-label-md font-label-md text-on-surface-variant hover:text-on-surface has-[:checked]:bg-surface-container-high has-[:checked]:text-on-surface has-[:checked]:shadow-sm">
+<input class="sr-only" name="priority" type="radio" value="Low"/>
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span>Low</span>
+</label>
+<label class="flex items-center justify-center gap-1.5 py-1.5 rounded-full cursor-pointer transition-colors text-label-md font-label-md text-on-surface-variant hover:text-on-surface has-[:checked]:bg-surface-container-high has-[:checked]:text-on-surface has-[:checked]:shadow-sm">
+<input checked="" class="sr-only" name="priority" type="radio" value="Medium"/>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Medium</span>
+</label>
+<label class="flex items-center justify-center gap-1.5 py-1.5 rounded-full cursor-pointer transition-colors text-label-md font-label-md text-on-surface-variant hover:text-on-surface has-[:checked]:bg-surface-container-high has-[:checked]:text-on-surface has-[:checked]:shadow-sm">
+<input class="sr-only" name="priority" type="radio" value="High"/>
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>High</span>
+</label>
+</div>
+<span class="text-outline font-label-sm text-label-sm">Urgent flags are audited by system moderators.</span>
+</div>
+</div>
+<!-- 3. Description Field -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface" for="ticket-description">
+                  Detailed Description <span class="text-error">*</span>
+</label>
+<span class="font-label-sm text-label-sm text-outline">Include steps or IDs</span>
+</div>
+<textarea class="w-full bg-surface-container-low text-on-surface placeholder:text-outline/60 p-space-md rounded-2xl font-body-md text-body-md focus:outline-none focus:bg-surface-container-high transition-all resize-y shadow-inner leading-relaxed" id="ticket-description" placeholder="Describe your issue in detail. Include reproduction steps, client version, device models, or timestamp of error..." rows="6"></textarea>
+<div class="flex items-center justify-between">
+<div class="hidden text-error font-label-sm text-label-sm flex items-center gap-1 mt-1" id="description-error">
+<span class="material-symbols-outlined text-[16px]">error</span>
+<span>Please describe your issue in detail (min 15 characters).</span>
+</div>
+<span class="text-outline font-label-sm text-label-sm ml-auto">Markdown formatting supported</span>
+</div>
+</div>
+<!-- Quick Template Chips -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<span class="text-outline font-label-sm text-label-sm mr-1">Insert template:</span>
+<button class="template-pill px-space-sm py-1 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" data-fill="Audio latency during voice streaming session. The bot delay exceeds 4000ms on WebSocket frame packets." type="button">
+                + Audio Latency
+              </button>
+<button class="template-pill px-space-sm py-1 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" data-fill="Invoiced amount on invoice #INV-9293 appears higher than subscribed tier. Please check applied discounts." type="button">
+                + Billing Discrepancy
+              </button>
+<button class="template-pill px-space-sm py-1 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" data-fill="Authentication token rejects API handshakes with error HTTP 403 Forbidden. Client IP is whitelisted." type="button">
+                + API Auth Fail
+              </button>
+</div>
+<!-- Actions Row -->
+<div class="flex flex-col sm:flex-row items-center justify-end gap-space-md pt-space-md mt-space-md bg-surface-container-low/30 -mx-space-xl -mb-space-xl p-space-xl rounded-b-lg">
+<button class="w-full sm:w-auto px-space-lg py-space-sm rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface transition-colors font-label-lg text-label-lg text-center" id="btn-cancel-ticket" type="button">
+                Reset &amp; Clear
+              </button>
+<button class="w-full sm:w-auto px-space-xl py-space-sm rounded-full bg-primary-container hover:bg-primary text-on-primary-container font-label-lg text-label-lg flex items-center justify-center gap-space-sm shadow-[0_0_24px_rgba(34,211,238,0.3)] hover:shadow-[0_0_32px_rgba(34,211,238,0.45)] transition-all font-semibold" id="btn-submit-ticket" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Submit Ticket</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Success Confirmation Card (Hidden by Default) -->
+<div class="hidden rounded-lg bg-surface-container p-space-xl shadow-xl flex-col items-center text-center relative overflow-hidden transition-all duration-300" id="ticket-success-card">
+<div class="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent pointer-events-none"></div>
+<!-- Pulsing Success Ring Icon -->
+<div class="relative w-20 h-20 rounded-full bg-surface-container-high flex items-center justify-center mb-space-lg shadow-[0_0_32px_rgba(34,211,238,0.25)]">
+<span class="w-full h-full rounded-full absolute inset-0 bg-primary-container/20 animate-ping opacity-75"></span>
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container relative z-10 shadow-lg">
+<span class="material-symbols-outlined text-[32px] font-bold">check_circle</span>
+</div>
+</div>
+<span class="font-label-md text-label-md text-primary tracking-widest uppercase mb-1">Receipt Confirmed</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-space-xs">Ticket Successfully Created!</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto mb-space-lg">
+            Your inquiry has been stored in your active session repository and queued directly for triage by our Tier 2 engineers.
+          </p>
+<!-- Generated Details Digest Box -->
+<div class="w-full max-w-lg rounded-2xl bg-surface-container-low p-space-lg flex flex-col gap-space-md mb-space-xl text-left shadow-inner">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container/50 -mx-space-lg -mt-space-lg p-space-md rounded-t-2xl">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Assigned Unique Identifier</span>
+<span class="px-space-md py-0.5 rounded-full bg-primary/20 text-primary font-bold text-title-md tracking-wider" id="summary-ticket-id">
+                TICK-0000
+              </span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-md pt-1">
+<div>
+<span class="block font-label-sm text-label-sm text-outline">Category</span>
+<span class="font-label-md text-label-md text-on-surface font-medium" id="summary-category">Technical Issue</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-outline">Priority</span>
+<span class="inline-flex items-center gap-1 font-label-md text-label-md text-tertiary font-medium" id="summary-priority">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Medium
+                </span>
+</div>
+<div class="col-span-2 sm:col-span-1">
+<span class="block font-label-sm text-label-sm text-outline">Timestamp</span>
+<span class="font-label-md text-label-md text-on-surface" id="summary-timestamp">Oct 24, 2024</span>
+</div>
+</div>
+<div class="pt-space-xs">
+<span class="block font-label-sm text-label-sm text-outline">Subject Summary</span>
+<p class="font-body-md text-body-md text-on-surface font-medium truncate" id="summary-subject">
+                Ticket subject goes here
+              </p>
+</div>
+</div>
+<!-- Post-submission Navigation Actions -->
+<div class="flex flex-col sm:flex-row items-center gap-space-md">
+<button class="w-full sm:w-auto px-space-lg py-space-sm rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg transition-colors flex items-center justify-center gap-space-xs" id="btn-create-another" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Create Another Ticket</span>
+</button>
+<a class="w-full sm:w-auto px-space-xl py-space-sm rounded-full bg-primary-container text-on-primary-container hover:bg-primary font-label-lg text-label-lg transition-all font-medium flex items-center justify-center gap-space-xs shadow-md" data-path="my-tickets" href="#">
+<span class="material-symbols-outlined text-[18px]">confirmation_number</span>
+<span>View in My Tickets</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Secondary Context Column / Sidebar Bento -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Live SLA Service Card -->
+<div class="rounded-lg bg-surface-container-low p-space-lg flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">verified</span>
+<h3 class="font-title-md text-title-md text-on-surface">Active SLA Commitments</h3>
+</div>
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between p-space-sm rounded-2xl bg-surface-container">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Urgent / High</div>
+<div class="font-label-sm text-label-sm text-outline">Service outages, critical payment</div>
+</div>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">&lt; 4 Hours</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-2xl bg-surface-container">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Standard / Medium</div>
+<div class="font-label-sm text-label-sm text-outline">Voice stream latency, accounts</div>
+</div>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">&lt; 24 Hours</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-2xl bg-surface-container">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Low Priority</div>
+<div class="font-label-sm text-label-sm text-outline">Feature feedback &amp; general queries</div>
+</div>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">&lt; 48 Hours</span>
+</div>
+</div>
+<div class="pt-space-xs text-outline font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span>Operating hours: 24/7 Global DevOps coverage</span>
+</div>
+</div>
+<!-- Recent User Submissions Snippet -->
+<div class="rounded-lg bg-surface-container-low p-space-lg flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">history</span>
+<span>Recent Inquiries</span>
+</h3>
+<span class="font-label-sm text-label-sm text-outline">Session Local</span>
+</div>
+<!-- Dynamic mini-list of recent tickets -->
+<div class="flex flex-col gap-space-xs" id="recent-tickets-mini-list">
+<!-- Injected by JavaScript -->
+</div>
+<a class="pt-space-xs text-primary hover:underline font-label-sm text-label-sm inline-flex items-center gap-1 self-start" data-path="my-tickets" href="#">
+<span>Browse all ticket history</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+<!-- Help Documentation Callout -->
+<div class="rounded-lg bg-surface-container-low p-space-lg flex flex-col gap-space-xs relative overflow-hidden">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary mb-1">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Looking for API docs?</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Refer to our developer portal for documentation regarding our VoiceBot WebRTC and TTS WebSocket endpoints.
+          </p>
+<a class="mt-space-sm font-label-md text-label-md text-primary hover:text-primary-fixed flex items-center gap-1" href="#">
+<span>View Developer Reference</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initCreateTicketPage() {
+    const STORAGE_KEY = 'voicebot_customer_tickets';
+
+    // 1. Initial Seed Data ensuring continuous dashboard compatibility
+    const defaultSeedTickets = [
+      {
+        id: 'TICK-8042',
+        subject: 'Microphone voice frame drops on iOS Safari',
+        category: 'Technical Issue',
+        priority: 'High',
+        description: 'Audio packets drop when switching tabs in mobile WebKit. VoiceBot model synthesis times out.',
+        createdDate: 'Oct 23, 2024 - 11:20',
+        status: 'Open'
+      },
+      {
+        id: 'TICK-7981',
+        subject: 'Billing tier upgrade credit calculation',
+        category: 'Payment',
+        priority: 'Medium',
+        description: 'Requesting review of prorated invoice balance after upgrading from Starter to Pro VoiceBot.',
+        createdDate: 'Oct 22, 2024 - 16:45',
+        status: 'Open'
+      },
+      {
+        id: 'TICK-7833',
+        subject: 'SSO OAuth identity provider integration',
+        category: 'Account',
+        priority: 'Medium',
+        description: 'Need enterprise SAML 2.0 metadata exchanged for custom tenant domain.',
+        createdDate: 'Oct 20, 2024 - 09:15',
+        status: 'Resolved'
+      },
+      {
+        id: 'TICK-7650',
+        subject: 'Speech-to-text accuracy in noisy environment',
+        category: 'General Query',
+        priority: 'Low',
+        description: 'Inquiring if ambient background noise cancellation can be fine-tuned via the API payload.',
+        createdDate: 'Oct 18, 2024 - 14:02',
+        status: 'Closed'
+      }
+    ];
+
+    // Ensure LocalStorage has starting data
+    function getStoredTickets() {
+      try {
+        const stored = localStorage.getItem(STORAGE_KEY);
+        if (!stored) {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultSeedTickets));
+          return defaultSeedTickets;
+        }
+        return JSON.parse(stored);
+      } catch (err) {
+        return defaultSeedTickets;
+      }
+    }
+
+    function saveStoredTickets(tickets) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(tickets));
+      } catch (err) {
+        console.error('Failed to write to localStorage:', err);
+      }
+    }
+
+    // Helper: Generate Random Ticket ID
+    function generateTicketId() {
+      const rand = Math.floor(1000 + Math.random() * 9000);
+      return `TICK-${rand}`;
+    }
+
+    // Helper: Formatted Date/Time string
+    function formatDateTime(date) {
+      const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      const mon = months[date.getMonth()];
+      const day = date.getDate();
+      const yr = date.getFullYear();
+      const hrs = String(date.getHours()).padStart(2, '0');
+      const mins = String(date.getMinutes()).padStart(2, '0');
+      return `${mon} ${day}, ${yr} - ${hrs}:${mins}`;
+    }
+
+    // Sync UI Counter & Mini List
+    function refreshTicketSummaryUI() {
+      const tickets = getStoredTickets();
+      const countEl = document.getElementById('ticket-total-counter');
+      if (countEl) countEl.textContent = tickets.length;
+
+      const miniListEl = document.getElementById('recent-tickets-mini-list');
+      if (miniListEl) {
+        miniListEl.innerHTML = '';
+        const recents = tickets.slice(0, 3);
+        recents.forEach(ticket => {
+          const item = document.createElement('div');
+          item.className = 'p-space-sm rounded-2xl bg-surface-container flex flex-col gap-0.5 hover:bg-surface-container-high transition-colors';
+          
+          let prioColor = 'bg-tertiary';
+          if (ticket.priority === 'High') prioColor = 'bg-error';
+          if (ticket.priority === 'Low') prioColor = 'bg-emerald-400';
+
+          item.innerHTML = `
+            <div class="flex items-center justify-between">
+              <span class="font-label-sm text-label-sm text-primary font-bold">${escapeHtml(ticket.id)}</span>
+              <span class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+                <span class="w-1.5 h-1.5 rounded-full ${prioColor}"></span>
+                ${escapeHtml(ticket.priority)}
+              </span>
+            </div>
+            <div class="font-body-md text-body-md text-on-surface truncate">${escapeHtml(ticket.subject)}</div>
+            <div class="font-label-sm text-label-sm text-outline">${escapeHtml(ticket.createdDate || 'Recent')}</div>
+          `;
+          miniListEl.appendChild(item);
+        });
+      }
+    }
+
+    function escapeHtml(string) {
+      if (!string) return '';
+      return String(string)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    // Interactive Toast Notification
+    function showToastNotification(ticketId) {
+      const container = document.getElementById('toast-container');
+      if (!container) return;
+
+      const toast = document.createElement('div');
+      toast.className = 'pointer-events-auto flex items-center gap-space-sm px-space-md py-space-sm rounded-full bg-surface-container-highest text-on-surface shadow-2xl transition-all duration-300 transform translate-x-12 opacity-0';
+      toast.innerHTML = `
+        <span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+        <span class="material-symbols-outlined text-primary text-[20px]">task_alt</span>
+        <span class="font-label-md text-label-md">
+          Ticket <strong>#${escapeHtml(ticketId)}</strong> created successfully!
+        </span>
+      `;
+
+      container.appendChild(toast);
+
+      // Trigger animation
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-x-12', 'opacity-0');
+        toast.classList.add('translate-x-0', 'opacity-100');
+      });
+
+      // Auto dismiss after 4 seconds
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-x-12');
+        setTimeout(() => {
+          toast.remove();
+        }, 350);
+      }, 4000);
+    }
+
+    // Setup active state on shell sidebar
+    function highlightActiveSidebar() {
+      const navLinks = document.querySelectorAll('aside nav a[data-path]');
+      navLinks.forEach(link => {
+        const path = link.getAttribute('data-path');
+        if (path === 'create-ticket') {
+          link.className = 'flex items-center gap-space-md px-space-md py-space-sm rounded-full bg-primary-container text-on-primary-container font-medium transition-colors';
+        } else {
+          link.className = 'flex items-center gap-space-md px-space-md py-space-sm rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors';
+        }
+      });
+    }
+
+    // DOM Elements
+    const form = document.getElementById('create-ticket-form');
+    const formCard = document.getElementById('ticket-form-card');
+    const successCard = document.getElementById('ticket-success-card');
+    const subjectInput = document.getElementById('ticket-subject');
+    const categorySelect = document.getElementById('ticket-category');
+    const descriptionTextarea = document.getElementById('ticket-description');
+    const subjectError = document.getElementById('subject-error');
+    const categoryError = document.getElementById('category-error');
+    const descriptionError = document.getElementById('description-error');
+    const subjectCount = document.getElementById('subject-count');
+    const btnCancel = document.getElementById('btn-cancel-ticket');
+    const btnCreateAnother = document.getElementById('btn-create-another');
+    const prioritySlaIndicator = document.getElementById('priority-sla-indicator');
+
+    // Priority Radio Listener to reflect SLA
+    const priorityRadios = document.querySelectorAll('input[name="priority"]');
+    priorityRadios.forEach(radio => {
+      radio.addEventListener('change', (e) => {
+        const val = e.target.value;
+        if (val === 'High') {
+          prioritySlaIndicator.textContent = '4h Response SLA (Urgent)';
+          prioritySlaIndicator.className = 'font-label-sm text-label-sm text-error font-medium';
+        } else if (val === 'Medium') {
+          prioritySlaIndicator.textContent = '24h Response SLA (Standard)';
+          prioritySlaIndicator.className = 'font-label-sm text-label-sm text-tertiary font-medium';
+        } else {
+          prioritySlaIndicator.textContent = '48h Response SLA';
+          prioritySlaIndicator.className = 'font-label-sm text-label-sm text-emerald-400 font-medium';
+        }
+      });
+    });
+
+    // Subject Character Count
+    if (subjectInput) {
+      subjectInput.addEventListener('input', () => {
+        const len = subjectInput.value.length;
+        if (subjectCount) subjectCount.textContent = `${len} / 120`;
+        if (len >= 5) {
+          subjectError.classList.add('hidden');
+          subjectInput.classList.remove('bg-error-container/20');
+        }
+      });
+    }
+
+    // Category error clear
+    if (categorySelect) {
+      categorySelect.addEventListener('change', () => {
+        if (categorySelect.value !== '') {
+          categoryError.classList.add('hidden');
+          categorySelect.classList.remove('bg-error-container/20');
+        }
+      });
+    }
+
+    // Description error clear
+    if (descriptionTextarea) {
+      descriptionTextarea.addEventListener('input', () => {
+        if (descriptionTextarea.value.trim().length >= 15) {
+          descriptionError.classList.add('hidden');
+          descriptionTextarea.classList.remove('bg-error-container/20');
+        }
+      });
+    }
+
+    // Template Chip Fillers
+    const templatePills = document.querySelectorAll('.template-pill');
+    templatePills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        const textToFill = pill.getAttribute('data-fill');
+        if (descriptionTextarea) {
+          descriptionTextarea.value = textToFill;
+          descriptionTextarea.focus();
+          descriptionError.classList.add('hidden');
+          descriptionTextarea.classList.remove('bg-error-container/20');
+        }
+      });
+    });
+
+    // Reset Form Action
+    function resetFormState() {
+      form.reset();
+      subjectError.classList.add('hidden');
+      categoryError.classList.add('hidden');
+      descriptionError.classList.add('hidden');
+      subjectInput.classList.remove('bg-error-container/20');
+      categorySelect.classList.remove('bg-error-container/20');
+      descriptionTextarea.classList.remove('bg-error-container/20');
+      if (subjectCount) subjectCount.textContent = '0 / 120';
+      if (prioritySlaIndicator) {
+        prioritySlaIndicator.textContent = '24h Response SLA';
+        prioritySlaIndicator.className = 'font-label-sm text-label-sm text-tertiary';
+      }
+    }
+
+    if (btnCancel) {
+      btnCancel.addEventListener('click', () => {
+        resetFormState();
+      });
+    }
+
+    if (btnCreateAnother) {
+      btnCreateAnother.addEventListener('click', () => {
+        resetFormState();
+        successCard.classList.add('hidden');
+        formCard.classList.remove('hidden');
+        subjectInput.focus();
+      });
+    }
+
+    // Form Submit Handler & Validation
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const subjectVal = subjectInput.value.trim();
+        const categoryVal = categorySelect.value;
+        const descriptionVal = descriptionTextarea.value.trim();
+
+        let isValid = true;
+
+        // Validate Subject
+        if (!subjectVal || subjectVal.length < 5) {
+          subjectError.classList.remove('hidden');
+          subjectInput.classList.add('bg-error-container/20');
+          isValid = false;
+        } else {
+          subjectError.classList.add('hidden');
+          subjectInput.classList.remove('bg-error-container/20');
+        }
+
+        // Validate Category
+        if (!categoryVal) {
+          categoryError.classList.remove('hidden');
+          categorySelect.classList.add('bg-error-container/20');
+          isValid = false;
+        } else {
+          categoryError.classList.add('hidden');
+          categorySelect.classList.remove('bg-error-container/20');
+        }
+
+        // Validate Description
+        if (!descriptionVal || descriptionVal.length < 15) {
+          descriptionError.classList.remove('hidden');
+          descriptionTextarea.classList.add('bg-error-container/20');
+          isValid = false;
+        } else {
+          descriptionError.classList.add('hidden');
+          descriptionTextarea.classList.remove('bg-error-container/20');
+        }
+
+        if (!isValid) return;
+
+        // Retrieve selected priority
+        const selectedPriorityRadio = document.querySelector('input[name="priority"]:checked');
+        const priorityVal = selectedPriorityRadio ? selectedPriorityRadio.value : 'Medium';
+
+        // Generate dynamic ticket
+        const newTicketId = generateTicketId();
+        const now = new Date();
+        const formattedTimestamp = formatDateTime(now);
+
+        const newTicket = {
+          id: newTicketId,
+          subject: subjectVal,
+          category: categoryVal,
+          priority: priorityVal,
+          description: descriptionVal,
+          createdDate: formattedTimestamp,
+          status: 'Open'
+        };
+
+        // Write to local storage prepend
+        const existing = getStoredTickets();
+        const updated = [newTicket, ...existing];
+        saveStoredTickets(updated);
+
+        // Populate Success Card
+        document.getElementById('summary-ticket-id').textContent = newTicketId;
+        document.getElementById('summary-category').textContent = categoryVal;
+        document.getElementById('summary-subject').textContent = subjectVal;
+        document.getElementById('summary-timestamp').textContent = formattedTimestamp;
+        
+        const summaryPriorityEl = document.getElementById('summary-priority');
+        let dotColor = 'bg-tertiary';
+        let textColor = 'text-tertiary';
+        if (priorityVal === 'High') {
+          dotColor = 'bg-error';
+          textColor = 'text-error';
+        } else if (priorityVal === 'Low') {
+          dotColor = 'bg-emerald-400';
+          textColor = 'text-emerald-400';
+        }
+        summaryPriorityEl.className = `inline-flex items-center gap-1 font-label-md text-label-md ${textColor} font-medium`;
+        summaryPriorityEl.innerHTML = `<span class="w-2 h-2 rounded-full ${dotColor}"></span> ${escapeHtml(priorityVal)}`;
+
+        // Swap panels
+        formCard.classList.add('hidden');
+        successCard.classList.remove('hidden');
+
+        // Trigger updates & toast
+        showToastNotification(newTicketId);
+        refreshTicketSummaryUI();
+      });
+    }
+
+    // Initialize UI on load
+    highlightActiveSidebar();
+    refreshTicketSummaryUI();
+  })();
+</script></main></div>
+</body></html>
