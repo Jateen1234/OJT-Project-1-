@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-tint":"#2fd9f4","on-background":"#e1e2e9","error-container":"#93000a","surface-container-lowest":"#0b0e13","surface":"#111319","secondary-fixed":"#d8e2ff","on-secondary-fixed-variant":"#004395","secondary-container":"#0566d9","on-surface":"#e1e2e9","on-secondary":"#002e6a","surface-container-highest":"#32353a","inverse-on-surface":"#2e3036","tertiary-fixed":"#ffddb5","tertiary-container":"#ffb13b","surface-dim":"#111319","primary":"#8aebff","secondary":"#adc6ff","on-error":"#690005","primary-fixed":"#a2eeff","error":"#ffb4ab","outline":"#859397","background":"#111319","secondary-fixed-dim":"#adc6ff","on-primary-fixed":"#001f25","on-secondary-fixed":"#001a42","on-secondary-container":"#e6ecff","on-error-container":"#ffdad6","inverse-primary":"#006877","on-tertiary-fixed-variant":"#643f00","primary-container":"#22d3ee","on-primary-fixed-variant":"#004e5a","tertiary-fixed-dim":"#ffb957","surface-variant":"#32353a","surface-container-low":"#191c21","on-tertiary":"#462b00","surface-container-high":"#272a30","inverse-surface":"#e1e2e9","primary-fixed-dim":"#2fd9f4","surface-bright":"#36393f","on-primary":"#00363e","on-primary-container":"#005763","tertiary":"#ffd6a3","on-tertiary-container":"#6e4600","surface-container":"#1d2025","on-surface-variant":"#bbc9cd","outline-variant":"#3c494c","on-tertiary-fixed":"#2a1800"},borderRadius:{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},spacing:{"space-md":"1rem","margin":"1.5rem","space-xl":"2rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xs":"0.25rem","gutter":"1rem"},fontFamily:{"label-lg":["Inter"],"headline-md":["Inter"],"display-lg":["Inter"],"headline-lg":["Inter"],"label-sm":["Inter"],"display-lg-mobile":["Inter"],"label-md":["Inter"],"body-lg":["Inter"],"title-md":["Inter"],"title-lg":["Inter"],"body-md":["Inter"]},fontSize:{"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"500"}],"headline-md":["22px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"display-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"500"}],"display-lg-mobile":["32px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"title-md":["16px",{lineHeight:"22px",fontWeight:"500"}],"title-lg":["18px",{lineHeight:"24px",fontWeight:"500"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-6 px-4 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-6"><div class="px-3 flex items-center justify-between"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container shadow-[0_0_24px_rgba(34,211,238,0.25)]"><span class="material-symbols-outlined text-[22px]">record_voice_over</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface font-semibold tracking-tight">VoiceBot</span><span class="font-label-sm text-label-sm text-on-surface-variant">Support Suite</span></div></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-primary tracking-wider font-semibold uppercase">Admin</span></div><nav class="flex flex-col gap-1 mt-4" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a aria-current="page" class="flex items-center gap-3 px-4 py-3 rounded transition-all bg-primary-container text-on-primary-container font-semibold" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center gap-3 px-4 py-3 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ticket-management" href="#"><span class="material-symbols-outlined text-[20px]">confirmation_number</span><span class="font-label-lg text-label-lg">Ticket Management</span></a><a class="flex items-center gap-3 px-4 py-3 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="faq-management" href="#"><span class="material-symbols-outlined text-[20px]">help_outline</span><span class="font-label-lg text-label-lg">FAQ Management</span></a><a class="flex items-center gap-3 px-4 py-3 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="analytics" href="#"><span class="material-symbols-outlined text-[20px]">insights</span><span class="font-label-lg text-label-lg">Analytics</span></a><a class="flex items-center gap-3 px-4 py-3 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="customer-view" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-label-lg text-label-lg">Customer View</span></a></nav></div><div class="flex flex-col gap-4 px-2 pt-4"><div class="p-3 rounded bg-surface-container flex items-center justify-between"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col overflow-hidden"><span class="font-label-md text-label-md text-on-surface font-medium truncate">Admin User</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Super Admin</span></div></div><button class="text-on-surface-variant hover:text-error transition-colors p-1 flex items-center justify-center" title="Logout" type="button"><span class="material-symbols-outlined text-[20px]">logout</span></button></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-8 flex items-center justify-between"><div class="flex items-center gap-2"><span class="font-label-md text-label-md text-on-surface-variant">Admin Portal</span><span class="font-label-sm text-label-sm text-on-surface-variant">/</span><span class="font-label-md text-label-md text-on-surface font-medium">Dashboard</span></div><div class="flex items-center gap-6"><div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low"><div class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(34,211,238,0.8)]"></div><span class="font-label-sm text-label-sm text-on-surface-variant">System Operational - <span class="text-primary">AI Engine v4.2</span></span></div><div class="flex items-center gap-4"><button class="relative p-2 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span></button><div class="flex items-center gap-3 pl-2"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-sm text-label-sm text-on-surface font-medium">Admin User</span><span class="font-label-sm text-label-sm text-on-surface-variant">Super Admin</span></div></div></div></div></header><main class="relative pt-16 w-full min-h-screen bg-surface"><div class="flex flex-col w-full">
+<div class="p-6 lg:p-10 flex flex-col gap-8 max-w-[1600px] mx-auto w-full">
+<!-- Hero / Telemetry Header -->
+<div class="relative overflow-hidden rounded-lg bg-surface-container-low p-6 lg:p-8 shadow-xl">
+<div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 -bottom-20 w-80 h-80 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+<div class="flex flex-col gap-2 max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high w-fit shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse shadow-[0_0_12px_rgba(34,211,238,0.8)]"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">System Overview & Telemetry</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface font-semibold tracking-tight">Admin Dashboard</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            Monitor multi-agent customer queue, real-time ticket triage, resolution velocity, and VoiceBot AI telemetry.
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<button class="group inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-bright transition-all shadow-sm active:scale-95" id="refreshBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:rotate-180 transition-transform duration-500">sync</span>
+<span class="font-label-lg text-label-lg font-medium">Refresh Data</span>
+</button>
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-bright transition-all shadow-sm active:scale-95" id="exportCsvBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">download</span>
+<span class="font-label-lg text-label-lg font-medium">Export CSV</span>
+</button>
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary-container text-on-primary-container hover:brightness-110 transition-all font-semibold shadow-[0_0_24px_rgba(34,211,238,0.3)] active:scale-95" data-path="ticket-management" href="#">
+<span class="material-symbols-outlined text-[18px]">confirmation_number</span>
+<span class="font-label-lg text-label-lg">Manage Tickets</span>
+</a>
+</div>
+</div>
+<!-- Quick Navigation Hub -->
+<div class="mt-8 pt-6 flex flex-wrap items-center gap-2 bg-surface-container-lowest/50 p-2 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider px-3 font-semibold">Shortcuts:</span>
+<button class="px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">dashboard</span>
+          Dashboard
+        </button>
+<a class="px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-colors flex items-center gap-1.5" data-path="ticket-management" href="#">
+<span class="material-symbols-outlined text-[16px]">confirmation_number</span>
+          Ticket Management
+        </a>
+<a class="px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-colors flex items-center gap-1.5" data-path="faq-management" href="#">
+<span class="material-symbols-outlined text-[16px]">help_outline</span>
+          FAQ Management
+        </a>
+<a class="px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-colors flex items-center gap-1.5" data-path="analytics" href="#">
+<span class="material-symbols-outlined text-[16px]">insights</span>
+          Analytics Hub
+        </a>
+<a class="px-3.5 py-1.5 rounded-full bg-surface-container text-primary hover:bg-surface-container-high font-label-md text-label-md transition-colors flex items-center gap-1.5 ml-auto" data-path="customer-view" href="#">
+<span class="material-symbols-outlined text-[16px]">switch_account</span>
+          Customer Portal View
+        </a>
+</div>
+</div>
+<!-- Metric / Statistics Overview Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+<!-- Total Tickets -->
+<div class="bg-surface-container-low rounded-lg p-5 flex flex-col justify-between shadow-md hover:bg-surface-container transition-all group">
+<div class="flex items-center justify-between mb-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[22px]">all_inbox</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">Lifetime Total</span>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight" id="statTotalCount">0</div>
+<div class="font-label-md text-label-md text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="text-primary font-medium">100%</span> baseline queue
+          </div>
+</div>
+</div>
+<!-- Open Tickets -->
+<div class="bg-surface-container-low rounded-lg p-5 flex flex-col justify-between shadow-md hover:bg-surface-container transition-all group">
+<div class="flex items-center justify-between mb-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/20 flex items-center justify-center text-tertiary-container group-hover:scale-110 transition-transform shadow-[0_0_16px_rgba(255,177,59,0.2)]">
+<span class="material-symbols-outlined text-[22px]">pending_actions</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm font-semibold uppercase">Open</span>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight" id="statOpenCount">0</div>
+<div class="font-label-md text-label-md text-on-surface-variant mt-1" id="statOpenPct">0% awaiting triage</div>
+</div>
+</div>
+<!-- In Progress Tickets -->
+<div class="bg-surface-container-low rounded-lg p-5 flex flex-col justify-between shadow-md hover:bg-surface-container transition-all group">
+<div class="flex items-center justify-between mb-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform shadow-[0_0_16px_rgba(5,102,217,0.2)]">
+<span class="material-symbols-outlined text-[22px]">sync</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm font-semibold uppercase">In Progress</span>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight" id="statProgressCount">0</div>
+<div class="font-label-md text-label-md text-on-surface-variant mt-1" id="statProgressPct">0% in active handling</div>
+</div>
+</div>
+<!-- Resolved Tickets -->
+<div class="bg-surface-container-low rounded-lg p-5 flex flex-col justify-between shadow-md hover:bg-surface-container transition-all group">
+<div class="flex items-center justify-between mb-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-fixed group-hover:scale-110 transition-transform shadow-[0_0_16px_rgba(34,211,238,0.2)]">
+<span class="material-symbols-outlined text-[22px]">check_circle</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-container/15 text-primary font-label-sm text-label-sm font-semibold uppercase">Resolved</span>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight" id="statResolvedCount">0</div>
+<div class="font-label-md text-label-md text-on-surface-variant mt-1" id="statResolvedPct">0% cleared cases</div>
+</div>
+</div>
+<!-- Closed Tickets -->
+<div class="bg-surface-container-low rounded-lg p-5 flex flex-col justify-between shadow-md hover:bg-surface-container transition-all group">
+<div class="flex items-center justify-between mb-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[22px]">archive</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold uppercase">Closed</span>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight" id="statClosedCount">0</div>
+<div class="font-label-md text-label-md text-on-surface-variant mt-1" id="statClosedPct">0% archived</div>
+</div>
+</div>
+</div>
+<!-- Distribution Overview Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<!-- Card 1: Ticket Status Distribution -->
+<div class="bg-surface-container-low rounded-lg p-6 lg:p-7 shadow-lg flex flex-col justify-between gap-6">
+<div>
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">donut_large</span>
+<h2 class="font-title-lg text-title-lg text-on-surface font-semibold">Ticket Status Distribution</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant px-2.5 py-1 rounded bg-surface-container">Operational Mix</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Live breakdown of ticket pipeline volume by processing stage.</p>
+</div>
+<div class="flex flex-col gap-4" id="statusMetersContainer">
+<!-- Injected via JavaScript -->
+</div>
+<div class="pt-4 bg-surface-container-lowest/40 rounded-lg p-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[18px]">bolt</span>
+<span class="font-label-md text-label-md text-on-surface">Average VoiceBot Triage Speed</span>
+</div>
+<span class="font-label-lg text-label-lg font-semibold text-primary">1.8 seconds</span>
+</div>
+</div>
+<!-- Card 2: Category-Wise Distribution -->
+<div class="bg-surface-container-low rounded-lg p-6 lg:p-7 shadow-lg flex flex-col justify-between gap-6">
+<div>
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">category</span>
+<h2 class="font-title-lg text-title-lg text-on-surface font-semibold">Category-Wise Distribution</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant px-2.5 py-1 rounded bg-surface-container">Topic Heatmap</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Proportion of voice inquiries categorized by core product domain.</p>
+</div>
+<div class="flex flex-col gap-4" id="categoryMetersContainer">
+<!-- Injected via JavaScript -->
+</div>
+<div class="pt-4 bg-surface-container-lowest/40 rounded-lg p-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<span class="font-label-md text-label-md text-on-surface">Top Topic Driver</span>
+</div>
+<span class="font-label-lg text-label-lg font-semibold text-tertiary" id="topCategoryIndicator">Analyzing...</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Insight Featurette -->
+<div class="bg-surface-container-low rounded-lg p-6 shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-5">
+<div class="w-14 h-14 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-container flex-shrink-0 shadow-[0_0_24px_rgba(34,211,238,0.25)]">
+<span class="material-symbols-outlined text-[32px]">graphic_eq</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-semibold text-on-surface">Voice Synthesizer & NLP Agent Fleet</span>
+<span class="font-body-md text-body-md text-on-surface-variant">4 active whisper transcription streams running smoothly across 12 region zones.</span>
+</div>
+</div>
+<div class="flex items-center gap-4 w-full md:w-auto justify-end">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container">
+<div class="w-2 h-2 rounded-full bg-primary-container animate-ping"></div>
+<span class="font-label-sm text-label-sm text-primary">Latency: 142ms</span>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Accuracy: 99.4%</span>
+</div>
+</div>
+</div>
+<!-- Recent Tickets Table Section -->
+<div class="bg-surface-container-low rounded-lg shadow-xl overflow-hidden flex flex-col">
+<div class="p-6 lg:p-7 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-surface-container-low">
+<div class="flex items-center gap-3">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">Recent Inquiries & Tickets</h2>
+<span class="font-label-sm text-label-sm font-semibold px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary" id="recentBadgeCount">0 Total</span>
+</div>
+<a class="inline-flex items-center gap-1.5 font-label-lg text-label-lg text-primary hover:text-primary-fixed transition-colors font-medium" data-path="ticket-management" href="#">
+<span>View All in Ticket Management</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Horizontally Scrollable Table Wrapper -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse min-w-[760px]">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<th class="py-4 px-6 font-semibold">Ticket ID</th>
+<th class="py-4 px-6 font-semibold">Subject & Snippet</th>
+<th class="py-4 px-6 font-semibold">Category</th>
+<th class="py-4 px-6 font-semibold">Priority</th>
+<th class="py-4 px-6 font-semibold">Created Date</th>
+<th class="py-4 px-6 font-semibold">Status</th>
+<th class="py-4 px-6 font-semibold text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-md text-body-md" id="ticketsTableBody">
+<!-- Populated via JavaScript -->
+</tbody>
+</table>
+</div>
+<!-- Empty State Fallback -->
+<div class="hidden p-16 flex-col items-center justify-center text-center gap-4 bg-surface-container-lowest/30" id="emptyState">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[32px]">folder_off</span>
+</div>
+<div class="max-w-md">
+<h3 class="font-title-lg text-title-lg text-on-surface font-medium">No tickets recorded in system</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+            Tickets created in Customer Portal will appear here in real-time. You can also trigger mock data seeding from the refresh button.
+          </p>
+</div>
+</div>
+<!-- Footer table summary -->
+<div class="p-4 px-6 bg-surface-container flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Showing newest entries synced from localized voice store</span>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sync active</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Ticket Detail Modal Dialog -->
+<div class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-surface-container-lowest/80 backdrop-blur-md transition-opacity" id="ticketModal">
+<div class="bg-surface-container rounded-lg max-w-2xl w-full p-6 lg:p-8 shadow-2xl relative flex flex-col gap-6 max-h-[90vh] overflow-y-auto">
+<!-- Modal Header -->
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded bg-surface-container-highest text-primary" id="modalTicketId">TICK-XXXX</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="modalTicketDate">--</span>
+</div>
+<h3 class="font-title-lg text-title-lg font-semibold text-on-surface mt-1" id="modalTicketSubject">Ticket Subject</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface hover:bg-surface-bright flex items-center justify-center transition-colors" id="closeModalBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Badges & Meta -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-3 bg-surface-container-low p-4 rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Status</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface mt-0.5" id="modalTicketStatus">--</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Priority</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface mt-0.5" id="modalTicketPriority">--</span>
+</div>
+<div class="flex flex-col col-span-2 sm:col-span-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Category</span>
+<span class="font-label-md text-label-md font-semibold text-primary mt-0.5" id="modalTicketCategory">--</span>
+</div>
+</div>
+<!-- Modal Body Content -->
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Inquiry / Transcript Description</span>
+<div class="p-4 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md whitespace-pre-wrap leading-relaxed max-h-60 overflow-y-auto" id="modalTicketDescription">
+          --
+        </div>
+</div>
+<!-- Action Footer -->
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">security</span>
+<span>Logged via VoiceBot Aether Engine</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-5 py-2 rounded-full bg-surface-container-highest text-on-surface hover:bg-surface-bright transition-all font-label-md text-label-md font-medium" id="modalDismissBtn" type="button">
+            Close
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Toast Notification -->
+<div class="fixed bottom-6 right-6 z-50 hidden items-center gap-3 px-5 py-3 rounded-full bg-surface-container-high text-on-surface shadow-2xl transition-all" id="toast">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md font-medium" id="toastMsg">Data refreshed successfully</span>
+</div>
+</div>
+<script>
+(function() {
+  const STORAGE_KEY = 'voicebot_customer_tickets';
+
+  const DEFAULT_SEED_TICKETS = [
+    {
+      id: "TICK-8042",
+      subject: "Microphone permission error on Safari macOS 14.2",
+      category: "Technical Issue",
+      priority: "High",
+      description: "When initiating voice synthesis support via the web interface on Safari 14.2, the audio context fails to release the hardware permission token, resulting in audio dropouts after 3 seconds.",
+      createdDate: "2025-05-12 14:28",
+      status: "Open"
+    },
+    {
+      id: "TICK-8041",
+      subject: "Annual Enterprise subscription invoice clarification",
+      category: "Payment & Billing",
+      priority: "Medium",
+      description: "Need an updated tax breakdown showing EU VAT identification number on the Q2 VoiceBot Enterprise invoice receipt.",
+      createdDate: "2025-05-12 11:15",
+      status: "In Progress"
+    },
+    {
+      id: "TICK-8040",
+      subject: "Custom Whisper fine-tuned dictionary export",
+      category: "General Query",
+      priority: "Low",
+      description: "Inquiring if the customized phoneme pronunciation dictionary can be exported in JSON format for offline mobile sync.",
+      createdDate: "2025-05-11 16:45",
+      status: "Resolved"
+    },
+    {
+      id: "TICK-8039",
+      subject: "SSO SAML 2.0 configuration sync failure with Okta",
+      category: "Account",
+      priority: "High",
+      description: "Users attempting to sign in via Okta tenant redirect to a 401 callback mismatch error. Certificate expiration verified as valid.",
+      createdDate: "2025-05-11 09:30",
+      status: "In Progress"
+    },
+    {
+      id: "TICK-8038",
+      subject: "Latency degradation during peak hours (18:00 - 20:00 UTC)",
+      category: "Technical Issue",
+      priority: "Medium",
+      description: "Observed text-to-speech response latencies increasing from ~220ms to 980ms during late afternoon peak loads.",
+      createdDate: "2025-05-10 19:22",
+      status: "Closed"
+    },
+    {
+      id: "TICK-8037",
+      subject: "API Token rate-limit adjustment request",
+      category: "Other",
+      priority: "Low",
+      description: "Requesting increase in concurrent streaming websocket streams from 10 to 25 for QA testing in staging cluster.",
+      createdDate: "2025-05-10 13:04",
+      status: "Resolved"
+    },
+    {
+      id: "TICK-8036",
+      subject: "Two-Factor authentication reset for admin account",
+      category: "Account",
+      priority: "High",
+      description: "Hardware token damaged while traveling. Backup recovery key validation needed to re-establish authenticator app.",
+      createdDate: "2025-05-09 17:50",
+      status: "Closed"
+    }
+  ];
+
+  function getTickets() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(DEFAULT_SEED_TICKETS));
+        return DEFAULT_SEED_TICKETS;
+      }
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        return parsed;
+      } else {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(DEFAULT_SEED_TICKETS));
+        return DEFAULT_SEED_TICKETS;
+      }
+    } catch (e) {
+      console.error("Failed to parse tickets from storage", e);
+      return DEFAULT_SEED_TICKETS;
+    }
+  }
+
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    const msg = document.getElementById('toastMsg');
+    if (!toast || !msg) return;
+    msg.textContent = message;
+    toast.classList.remove('hidden');
+    toast.classList.add('flex');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+      toast.classList.remove('flex');
+    }, 3000);
+  }
+
+  function getStatusBadge(status) {
+    const s = (status || '').toLowerCase().trim();
+    if (s === 'open') {
+      return '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-tertiary-container/15 text-tertiary"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Open</span>';
+    } else if (s === 'in progress') {
+      return '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-secondary-container/20 text-secondary"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>In Progress</span>';
+    } else if (s === 'resolved') {
+      return '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-primary-container/15 text-primary"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Resolved</span>';
+    } else {
+      return '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-surface-container-highest text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-outline"></span>Closed</span>';
+    }
+  }
+
+  function getPriorityBadge(priority) {
+    const p = (priority || '').toLowerCase().trim();
+    if (p === 'high') {
+      return '<span class="px-2.5 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-error-container/40 text-error">High</span>';
+    } else if (p === 'medium') {
+      return '<span class="px-2.5 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-tertiary-container/20 text-tertiary">Medium</span>';
+    } else {
+      return '<span class="px-2.5 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-surface-container-highest text-on-surface-variant">Low</span>';
+    }
+  }
+
+  function renderDashboard() {
+    const tickets = getTickets();
+    const total = tickets.length;
+
+    let openCount = 0;
+    let inProgressCount = 0;
+    let resolvedCount = 0;
+    let closedCount = 0;
+
+    const categories = {
+      "Technical Issue": 0,
+      "Payment & Billing": 0,
+      "Account": 0,
+      "General Query": 0,
+      "Other": 0
+    };
+
+    tickets.forEach(t => {
+      const s = (t.status || '').toLowerCase().trim();
+      if (s === 'open') openCount++;
+      else if (s === 'in progress') inProgressCount++;
+      else if (s === 'resolved') resolvedCount++;
+      else if (s === 'closed') closedCount++;
+
+      const c = t.category || 'Other';
+      if (categories.hasOwnProperty(c)) {
+        categories[c]++;
+      } else {
+        categories["Other"]++;
+      }
+    });
+
+    // Update Top Counters
+    document.getElementById('statTotalCount').textContent = total;
+    document.getElementById('statOpenCount').textContent = openCount;
+    document.getElementById('statProgressCount').textContent = inProgressCount;
+    document.getElementById('statResolvedCount').textContent = resolvedCount;
+    document.getElementById('statClosedCount').textContent = closedCount;
+
+    const openPct = total ? Math.round((openCount / total) * 100) : 0;
+    const progPct = total ? Math.round((inProgressCount / total) * 100) : 0;
+    const resPct = total ? Math.round((resolvedCount / total) * 100) : 0;
+    const closedPct = total ? Math.round((closedCount / total) * 100) : 0;
+
+    document.getElementById('statOpenPct').textContent = `${openPct}% awaiting triage`;
+    document.getElementById('statProgressPct').textContent = `${progPct}% in active handling`;
+    document.getElementById('statResolvedPct').textContent = `${resPct}% cleared cases`;
+    document.getElementById('statClosedPct').textContent = `${closedPct}% archived`;
+
+    // Render Status Distribution Meters
+    const statusMeters = [
+      { name: "Open", count: openCount, pct: openPct, color: "bg-tertiary-container", textColor: "text-tertiary" },
+      { name: "In Progress", count: inProgressCount, pct: progPct, color: "bg-secondary-container", textColor: "text-secondary" },
+      { name: "Resolved", count: resolvedCount, pct: resPct, color: "bg-primary-container", textColor: "text-primary" },
+      { name: "Closed", count: closedCount, pct: closedPct, color: "bg-surface-container-highest", textColor: "text-on-surface-variant" }
+    ];
+
+    const statusContainer = document.getElementById('statusMetersContainer');
+    statusContainer.innerHTML = statusMeters.map(item => `
+      <div class="flex flex-col gap-1.5">
+        <div class="flex items-center justify-between font-label-md text-label-md">
+          <span class="text-on-surface font-medium flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full ${item.color}"></span>
+            ${item.name}
+          </span>
+          <div class="flex items-center gap-3">
+            <span class="text-on-surface-variant">${item.count} tickets</span>
+            <span class="${item.textColor} font-semibold w-10 text-right">${item.pct}%</span>
+          </div>
+        </div>
+        <div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+          <div class="h-full rounded-full ${item.color} transition-all duration-700 ease-out" style="width: ${item.pct}%"></div>
+        </div>
+      </div>
+    `).join('');
+
+    // Render Category-Wise Meters
+    const categoryContainer = document.getElementById('categoryMetersContainer');
+    const catKeys = Object.keys(categories);
+    let topCatName = "General Query";
+    let topCatMax = -1;
+
+    categoryContainer.innerHTML = catKeys.map(cat => {
+      const count = categories[cat];
+      const pct = total ? Math.round((count / total) * 100) : 0;
+      if (count > topCatMax) {
+        topCatMax = count;
+        topCatName = cat;
+      }
+      return `
+        <div class="flex flex-col gap-1.5">
+          <div class="flex items-center justify-between font-label-md text-label-md">
+            <span class="text-on-surface font-medium">${cat}</span>
+            <div class="flex items-center gap-3">
+              <span class="text-on-surface-variant">${count}</span>
+              <span class="text-primary font-semibold w-10 text-right">${pct}%</span>
+            </div>
+          </div>
+          <div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+            <div class="h-full rounded-full bg-surface-tint transition-all duration-700 ease-out" style="width: ${pct}%"></div>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    document.getElementById('topCategoryIndicator').textContent = `${topCatName} (${topCatMax} cases)`;
+
+    // Render Recent Inquiries Table
+    const tbody = document.getElementById('ticketsTableBody');
+    const emptyState = document.getElementById('emptyState');
+    const badgeCount = document.getElementById('recentBadgeCount');
+    badgeCount.textContent = `${total} Total`;
+
+    if (!tickets || tickets.length === 0) {
+      tbody.innerHTML = '';
+      emptyState.classList.remove('hidden');
+      emptyState.classList.add('flex');
+      return;
+    }
+
+    emptyState.classList.add('hidden');
+    emptyState.classList.remove('flex');
+
+    // Sort newest first
+    const sorted = [...tickets].sort((a, b) => new Date(b.createdDate || 0) - new Date(a.createdDate || 0));
+
+    tbody.innerHTML = sorted.map((t, index) => {
+      const bgAlt = index % 2 === 0 ? 'bg-surface-container-low' : 'bg-surface-container';
+      return `
+        <tr class="${bgAlt} hover:bg-surface-container-high transition-colors group">
+          <td class="py-4 px-6 font-label-md text-label-md font-semibold text-primary">
+            ${t.id || 'N/A'}
+          </td>
+          <td class="py-4 px-6 max-w-xs">
+            <div class="font-title-md text-title-md font-medium text-on-surface truncate">${t.subject || 'No Subject'}</div>
+            <div class="font-body-md text-body-md text-on-surface-variant truncate text-xs mt-0.5">${t.description || ''}</div>
+          </td>
+          <td class="py-4 px-6">
+            <span class="px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-medium">
+              ${t.category || 'Other'}
+            </span>
+          </td>
+          <td class="py-4 px-6">
+            ${getPriorityBadge(t.priority)}
+          </td>
+          <td class="py-4 px-6 font-label-md text-label-md text-on-surface-variant whitespace-nowrap">
+            ${t.createdDate || 'Just now'}
+          </td>
+          <td class="py-4 px-6 whitespace-nowrap">
+            ${getStatusBadge(t.status)}
+          </td>
+          <td class="py-4 px-6 text-right whitespace-nowrap">
+            <button type="button" data-ticket-id="${t.id}" class="viewDetailBtn inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-highest hover:bg-primary hover:text-on-primary text-on-surface transition-all font-label-md text-label-md font-medium active:scale-95 shadow-sm">
+              <span>View</span>
+              <span class="material-symbols-outlined text-[16px]">visibility</span>
+            </button>
+          </td>
+        </tr>
+      `;
+    }).join('');
+
+    // Attach listeners for modal detail buttons
+    document.querySelectorAll('.viewDetailBtn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const id = this.getAttribute('data-ticket-id');
+        openTicketModal(id);
+      });
+    });
+  }
+
+  function openTicketModal(ticketId) {
+    const tickets = getTickets();
+    const ticket = tickets.find(t => t.id === ticketId);
+    if (!ticket) return;
+
+    document.getElementById('modalTicketId').textContent = ticket.id;
+    document.getElementById('modalTicketDate').textContent = ticket.createdDate || 'Recent';
+    document.getElementById('modalTicketSubject').textContent = ticket.subject || 'Ticket Details';
+    document.getElementById('modalTicketStatus').innerHTML = getStatusBadge(ticket.status);
+    document.getElementById('modalTicketPriority').innerHTML = getPriorityBadge(ticket.priority);
+    document.getElementById('modalTicketCategory').textContent = ticket.category || 'General';
+    document.getElementById('modalTicketDescription').textContent = ticket.description || 'No description provided.';
+
+    const modal = document.getElementById('ticketModal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeTicketModal() {
+    const modal = document.getElementById('ticketModal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  // Export CSV feature
+  function exportCSV() {
+    const tickets = getTickets();
+    if (!tickets || tickets.length === 0) {
+      showToast("No tickets available to export.");
+      return;
+    }
+
+    const headers = ["ID", "Subject", "Category", "Priority", "Status", "CreatedDate", "Description"];
+    const rows = tickets.map(t => [
+      `"${t.id || ''}"`,
+      `"${(t.subject || '').replace(/"/g, '""')}"`,
+      `"${t.category || ''}"`,
+      `"${t.priority || ''}"`,
+      `"${t.status || ''}"`,
+      `"${t.createdDate || ''}"`,
+      `"${(t.description || '').replace(/"/g, '""')}"`
+    ]);
+
+    const csvContent = "data:text/csv;charset=utf-8," + [headers.join(","), ...rows.map(e => e.join(","))].join("\n");
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", `VoiceBot_Tickets_Export_${new Date().toISOString().slice(0, 10)}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    showToast("CSV report generated successfully!");
+  }
+
+  // Event bindings
+  document.addEventListener('DOMContentLoaded', () => {
+    renderDashboard();
+
+    const refreshBtn = document.getElementById('refreshBtn');
+    if (refreshBtn) {
+      refreshBtn.addEventListener('click', () => {
+        renderDashboard();
+        showToast("Telemetry synced with latest local queue.");
+      });
+    }
+
+    const exportBtn = document.getElementById('exportCsvBtn');
+    if (exportBtn) {
+      exportBtn.addEventListener('click', exportCSV);
+    }
+
+    const closeBtn = document.getElementById('closeModalBtn');
+    const dismissBtn = document.getElementById('modalDismissBtn');
+    if (closeBtn) closeBtn.addEventListener('click', closeTicketModal);
+    if (dismissBtn) dismissBtn.addEventListener('click', closeTicketModal);
+
+    const modal = document.getElementById('ticketModal');
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeTicketModal();
+      });
+    }
+
+    // Auto listen to storage changes from other tabs or Customer Portal
+    window.addEventListener('storage', (e) => {
+      if (e.key === STORAGE_KEY) {
+        renderDashboard();
+      }
+    });
+  });
+
+  // Run render initially
+  renderDashboard();
+})();
+</script></main></div></body></html>
