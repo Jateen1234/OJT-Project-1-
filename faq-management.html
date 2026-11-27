@@ -227,25 +227,24 @@
     }
 
     function loadFaqs() {
-      try {
-        const raw = localStorage.getItem(STORAGE_KEY);
-        if (raw === null) {
-          faqs = [...DEFAULT_FAQS];
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(faqs));
-        } else {
-          const parsed = JSON.parse(raw);
-          if (Array.isArray(parsed)) {
-            faqs = parsed;
-          } else {
-            throw new Error('Invalid FAQ data format in localStorage.');
-          }
-        }
-      } catch (err) {
-        console.error('Failed to load FAQs from localStorage:', err);
-        faqs = [...DEFAULT_FAQS];
-        showToast('Could not read saved FAQs. Loaded defaults.', 'error');
-      }
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+
+    if (raw === null) {
+      faqs = [...DEFAULT_FAQS];
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(faqs));
+      return;
     }
+
+    const parsed = JSON.parse(raw);
+    faqs = Array.isArray(parsed) ? parsed : [];
+
+  } catch (err) {
+    console.error('Failed to load FAQs:', err);
+    faqs = [];
+    showToast('Could not read saved FAQs.', 'error');
+  }
+}
 
     function saveFaqs() {
       try {

@@ -917,11 +917,8 @@
 
       // Seed mock demo data
       function seedDemoData() {
-        const existing = loadRawTickets();
-        const merged = [...DEMO_TICKETS, ...existing.filter(e => !DEMO_TICKETS.some(d => d.id === e.id))];
-        saveTickets(merged);
-        recomputeTelemetry();
-      }
+  recomputeTelemetry();
+}
 
       // Export JSON / CSV summary
       function exportSummary() {

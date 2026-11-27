@@ -374,17 +374,18 @@
 
     // Ensure LocalStorage has starting data
     function getStoredTickets() {
-      try {
-        const stored = localStorage.getItem(STORAGE_KEY);
-        if (!stored) {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultSeedTickets));
-          return defaultSeedTickets;
-        }
-        return JSON.parse(stored);
-      } catch (err) {
-        return defaultSeedTickets;
-      }
-    }
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+
+    if (!stored) return [];
+
+    const parsed = JSON.parse(stored);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (err) {
+    console.error('Failed to load tickets:', err);
+    return [];
+  }
+}
 
     function saveStoredTickets(tickets) {
       try {

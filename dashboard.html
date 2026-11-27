@@ -541,22 +541,19 @@
       }
     ];
 
-    function getTickets() {
-      try {
-        const raw = localStorage.getItem(STORAGE_KEY);
-        if (!raw) {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(DEFAULT_TICKETS));
-          return DEFAULT_TICKETS;
-        }
-        const parsed = JSON.parse(raw);
-        if (Array.isArray(parsed) && parsed.length > 0) {
-          return parsed;
-        }
-        return DEFAULT_TICKETS;
-      } catch (e) {
-        return DEFAULT_TICKETS;
-      }
-    }
+function getTickets() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+
+    if (!raw) return [];
+
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (e) {
+    console.error('Failed to load tickets:', e);
+    return [];
+  }
+}
 
     function saveTickets(tickets) {
       try {

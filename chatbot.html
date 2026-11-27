@@ -110,7 +110,9 @@
 </div>
 <script>
 (function() {
-  const FAQ_DATA = [
+  
+function getFAQData() {
+  const DEFAULT_FAQS = [
     {
       category: "Account and Login",
       keywords: ["password", "reset", "login", "sign in", "account", "locked", "2fa", "two factor", "forgot"],
@@ -138,10 +140,39 @@
     {
       category: "General Support",
       keywords: ["hours", "contact", "human", "agent", "support", "help", "hello", "hi", "hey", "thanks", "thank you"],
-      answer: "Hello! I'm VoiceBot, your 24/7 AI support assistant. I can help with account access, billing, order tracking, and technical troubleshooting. If you need a human specialist, you can create a support ticket anytime.",
-      related: ["Reset my password", "Check order status", "Billing & refunds", "Troubleshoot audio"]
+      answer: "Hello! I'm VoiceBot, your 24/7 AI support assistant. I can help with account access, billing, order tracking, and technical troubleshooting.",
+      related: ["Reset my password", "Check order status", "Billing & refunds"]
     }
   ];
+
+  try {
+    const saved = localStorage.getItem("voicebot_faqs");
+
+    if (saved === null) return DEFAULT_FAQS;
+
+    const parsed = JSON.parse(saved);
+
+    if (!Array.isArray(parsed)) return DEFAULT_FAQS;
+
+    return parsed
+      .filter(item => item && item.question && item.answer)
+      .map(item => ({
+        ...item,
+        keywords: Array.isArray(item.keywords) && item.keywords.length
+          ? item.keywords
+          : item.question.toLowerCase()
+              .split(/[^a-z0-9]+/)
+              .filter(word => word.length > 2),
+        related: Array.isArray(item.related) ? item.related : []
+      }));
+
+  } catch (error) {
+    console.error("FAQ loading failed:", error);
+    return DEFAULT_FAQS;
+  }
+}
+
+let FAQ_DATA = getFAQData();
 
   const DEFAULT_SUGGESTIONS = [
     "Reset my password",
@@ -316,38 +347,42 @@
     window.speechSynthesis.speak(utterance);
   }
 
-  function matchFAQ(query) {
-    const normalized = query.toLowerCase();
-    let bestMatch = null;
-    let highestScore = 0;
+  
+function matchFAQ(query) {
+  const normalized = query.toLowerCase().trim();
+  let bestMatch = null;
+  let highestScore = 0;
 
-    for (const item of FAQ_DATA) {
-      let score = 0;
-      for (const kw of item.keywords) {
-        if (normalized.includes(kw)) {
-          score += kw.split(" ").length;
-        }
-      }
-      if (score > highestScore) {
-        highestScore = score;
-        bestMatch = item;
+  for (const item of FAQ_DATA) {
+    let score = 0;
+
+    for (const kw of item.keywords) {
+      if (normalized.includes(kw.toLowerCase())) {
+        score += kw.split(" ").length;
       }
     }
 
-    if (bestMatch && highestScore > 0) {
-      return {
-        matched: true,
-        answer: bestMatch.answer,
-        related: bestMatch.related
-      };
+    if (score > highestScore) {
+      highestScore = score;
+      bestMatch = item;
     }
+  }
 
+  if (bestMatch && highestScore > 0) {
     return {
-      matched: false,
-      answer: "I'm not completely sure about that one. Would you like me to open a support ticket so a specialist can help you directly?",
-      related: ["Create Support Ticket", "Reset my password", "Billing & refunds"]
+      matched: true,
+      answer: bestMatch.answer,
+      related: bestMatch.related || []
     };
   }
+
+  return {
+    matched: false,
+    answer: "I'm not completely sure about that one. Would you like me to open a support ticket so a specialist can help you directly?",
+    related: ["Create Support Ticket", "Reset my password", "Billing & refunds"]
+  };
+}
+
 
   function formatTime(date) {
     return new Date(date).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });

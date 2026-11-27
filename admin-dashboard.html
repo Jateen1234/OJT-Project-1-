@@ -381,24 +381,18 @@
   ];
 
   function getTickets() {
-    try {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if (!raw) {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(DEFAULT_SEED_TICKETS));
-        return DEFAULT_SEED_TICKETS;
-      }
-      const parsed = JSON.parse(raw);
-      if (Array.isArray(parsed) && parsed.length > 0) {
-        return parsed;
-      } else {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(DEFAULT_SEED_TICKETS));
-        return DEFAULT_SEED_TICKETS;
-      }
-    } catch (e) {
-      console.error("Failed to parse tickets from storage", e);
-      return DEFAULT_SEED_TICKETS;
-    }
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+
+    if (!raw) return [];
+
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (e) {
+    console.error("Failed to load tickets:", e);
+    return [];
   }
+}
 
   function showToast(message) {
     const toast = document.getElementById('toast');

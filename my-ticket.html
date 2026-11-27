@@ -436,29 +436,23 @@
 
     // Load from LocalStorage or Fallback
     function loadTickets() {
-      try {
-        const stored = localStorage.getItem('voicebot_customer_tickets');
-        if (stored) {
-          const parsed = JSON.parse(stored);
-          if (Array.isArray(parsed) && parsed.length > 0) {
-            // Merge: stored customer tickets at top, default samples appended if not duplicates
-            const storedIds = new Set(parsed.map(t => t.id));
-            const remainingDefaults = DEFAULT_TICKETS.filter(t => !storedIds.has(t.id));
-            allTickets = [...parsed, ...remainingDefaults];
-          } else {
-            allTickets = [...DEFAULT_TICKETS];
-          }
-        } else {
-          allTickets = [...DEFAULT_TICKETS];
-          localStorage.setItem('voicebot_customer_tickets', JSON.stringify(DEFAULT_TICKETS));
-        }
-      } catch (err) {
-        console.error("Error reading localStorage voicebot_customer_tickets:", err);
-        allTickets = [...DEFAULT_TICKETS];
-      }
-      applyFiltersAndRender();
-      updateMetrics();
+  try {
+    const stored = localStorage.getItem('voicebot_customer_tickets');
+
+    if (!stored) {
+      allTickets = [];
+    } else {
+      const parsed = JSON.parse(stored);
+      allTickets = Array.isArray(parsed) ? parsed : [];
     }
+  } catch (err) {
+    console.error("Error reading tickets:", err);
+    allTickets = [];
+  }
+
+  applyFiltersAndRender();
+  updateMetrics();
+}
 
     function saveTickets() {
       try {
