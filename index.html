@@ -299,6 +299,12 @@
             btnLoader.classList.remove('flex');
             btnLabel.classList.remove('hidden');
             triggerToast('Session Authenticated', 'Connecting to Neural Dispatch Hub...');
+            const destination =
+              emailVal === 'sysops.lead@voicebot.enterprise.ai'
+                ? 'admin-dashboard.html'
+                : 'dashboard.html';
+
+            window.location.href = destination;
           }, 1800);
         });
       }
